@@ -8,3 +8,42 @@ body{
     height: 100vh;
 }
 
+.container{
+    display: grid;
+    grid-template-areas:  
+    "header header nav"
+    "love next nav"
+    "love next nav"
+    "footer footer nav"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5,300px) ;
+}
+
+.container :nth-child(1) {
+    background-color: red;
+    grid-area: header;
+    height: 50px;
+}
+
+.container :nth-child(2) {
+    background-color: blue;
+    grid-area: nav;
+}
+
+.container :nth-child(3) {
+    background-color: yellow;
+    
+    grid-area: love;
+}
+
+.container :nth-child(4) {
+    background-color: green;
+    grid-area: next;
+}
+
+.container :nth-child(5) {
+    background-color: purple;
+    grid-area: footer;
+}
